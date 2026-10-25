@@ -1,6 +1,6 @@
 
 import argparse
-from utilities import LeNet, load_data, train_model, plot
+from utilities import ConvNet, load_data, train_model, plot
 
 def main():
     parser = argparse.ArgumentParser(description='MNIST Classification with PyTorch')
@@ -10,7 +10,7 @@ def main():
     args = parser.parse_args()
 
     train_loader, test_loader = load_data(args.batch_size)
-    model = LeNet()
+    model = ConvNet()
     loss_list, acc_train, acc_test = train_model(model, train_loader, test_loader, args.num_epochs, args.learning_rate)
     plot(loss_list, acc_train, acc_test)
 

@@ -3,7 +3,7 @@ MNIST Classification Using PyTorch
 
 # MNIST Classification with PyTorch
 
-This project implements a LeNet convolutional neural network (CNN) to classify handwritten digits from the MNIST dataset using PyTorch.
+This project implements a convolutional neural network (ConvNet) for MNIST handwritten digit classification using PyTorch. The model follows Module 7B, Section 3, and uses argparse to configure training hyperparameters through the command line.
 
 ## Project Files
 - `utilities.py`: Model architecture, dataset loading, training, evaluation, and plotting.
@@ -41,9 +41,10 @@ python run.py -e 3 -b 500 -l 0.0005
 The program automatically downloads MNIST, trains the model using CPU or GPU when available, evaluates classification accuracy, and saves the results to `figure.png`.
 
 ## Experimental Results
-| Configuration | Test Accuracy |
-|---|---|
-| Default (2 epochs, batch 1000, LR 0.001) | 89.30% |
-| Custom (3 epochs, batch 500, LR 0.0005) | 91.53% |
 
-Results may vary between runs due to random initialization and data shuffling.
+| Configuration | Training Accuracy | Test Accuracy |
+|---|---|---|
+| Default (2 epochs, batch 1000, LR 0.001) | 97.31% | 97.40% |
+| Custom (3 epochs, batch 500, LR 0.0005) | 98.98% | 98.62% |
+
+Results may vary due to random initialization and data shuffling.
